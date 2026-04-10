@@ -1,7 +1,7 @@
 import useFetch from "../useFetch"
 
 const BooksByAuthor=({author})=>{
-    const{data,loading,error}=useFetch(`http://localhost:3000/books/author/${author}`)
+    const{data,loading,error}=useFetch(`https://books-opal-three.vercel.app/books/author/${author}`)
     // console.log(data)
     if(loading) return <p>Loading...</p>
     if(!data || data.length===0) return <p>No book found.</p>

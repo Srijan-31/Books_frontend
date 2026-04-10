@@ -1,7 +1,7 @@
 import useFetch from "../useFetch"
 
 const BooksByTitle =({title})=>{
-    const{data,loading,error}=useFetch(`http://localhost:3000/books/${title}`)
+    const{data,loading,error}=useFetch(`https://books-opal-three.vercel.app/books/${title}`)
 
     // console.log(data)
 
