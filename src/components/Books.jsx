@@ -4,6 +4,8 @@ const Books=()=>{
     const[successMessage,setSuccessMessage]=useState("")
     const {data,loading,error}=useFetch("https://books-opal-three.vercel.app/books")
     // console.log(data)
+    if(loading) return <p>Loading...</p>
+    if(!data || data.length===0) return <p>No book found.</p>
 
     const handleDelete=async (bookId)=>{
         try{
