@@ -6,6 +6,7 @@ const Books=()=>{
     // console.log(data)
     if(loading) return <p>Loading...</p>
     if(!data || data.length===0) return <p>No book found.</p>
+    if(error) return <p>Error :{error.message}</p>
 
     const handleDelete=async (bookId)=>{
         try{
